@@ -5,7 +5,7 @@ Windows Requirements:
   - opencv-python
   - pywin32
   - numpy
-  - skimage
+  - scikit-image
 
 Linux Requirements:
   - coming soon
