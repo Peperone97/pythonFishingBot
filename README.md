@@ -1,5 +1,5 @@
 # pythonFishingBot
-This code can fish for you in Terraria and Minecraft
+This code can fish for you in Terraria and Minecraft,
 for minecraft you must change the left click with the right click
 
 Windows Requirements:
