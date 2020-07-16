@@ -1,5 +1,5 @@
 # pythonFishingBot
-This code can fish for you in Terraria and Minecraft. Under linux the Terraria bot isn't implemented
+This script can fish for you in Terraria and Minecraft. Under Linux, the Terraria bot hasn't yet been implemented.
 
 Windows Requirements:
   - opencv-python
@@ -13,10 +13,10 @@ Linux Requirements:
   - numpy
   - scikit-image
 
-How to do it work:
-  - place the mouse on the point where the hook will go
+How to make it work:
+  - place the cursor over the point where the hook will go
   - open the terminal and type "python main.py"
-  - refocus the screen on the game and it's done
+  - refocus the game window and you're done
 
-Now the bot will fish for you
-For stop the bot focus the terminal and press enter
+From now on, the bot will fish for you.
+To stop it, focus the terminal again and press Enter.
