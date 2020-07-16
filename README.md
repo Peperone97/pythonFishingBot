@@ -1,6 +1,5 @@
 # pythonFishingBot
-This code can fish for you in Terraria and Minecraft,
-for minecraft you must change the left click with the right click
+This code can fish for you in Terraria and Minecraft. Under linux the Terraria bot isn't implemented
 
 Windows Requirements:
   - opencv-python
@@ -9,4 +8,14 @@ Windows Requirements:
   - scikit-image
 
 Linux Requirements:
-  - coming soon
+  - opencv-python
+  - pyautogui
+  - numpy
+  - scikit-image
+
+How to do it work:
+  - place the mouse on the point where the hook will go
+  - open the terminal and type "python main.py"
+  - refocus the screen on the game and it's done
+  Now the bot will fish for you
+For stop the bot focus the terminal and press enter
