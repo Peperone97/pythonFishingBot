@@ -6,7 +6,7 @@ Windows Requirements:
   - pywin32
   - numpy
   - scikit-image
-
+  
 Linux Requirements:
   - opencv-python
   - pyautogui
@@ -17,5 +17,5 @@ How to do it work:
   - place the mouse on the point where the hook will go
   - open the terminal and type "python main.py"
   - refocus the screen on the game and it's done
-  Now the bot will fish for you
+Now the bot will fish for you
 For stop the bot focus the terminal and press enter
