@@ -31,6 +31,7 @@ def mouseClickLinux(x, y):
         pyautogui.click(button="right")
 
 def throwFishingLine(x, y):
+    print("throw")
     if(sys.platform == "win32"):
         mouseClickWindows(x, y)
         win32api.SetCursorPos((x, y + 100))
@@ -48,6 +49,7 @@ def getFishingLineImage(x, y):
     return image
 
 def getFishingLine(x, y):
+    print("get")
     if(sys.platform == "win32"):
         win32api.SetCursorPos((x, y))
         mouseClickWindows(x, y)
@@ -57,17 +59,11 @@ def getFishingLine(x, y):
         mouseClickLinux(x, y)
 
 def fishing():
-    # get mouse positions
+
     if (sys.platform == "win32"):
         (x, y) = win32api.GetCursorPos()
-        mouseClickWindows(x, y)  # focus on the game
-        time.sleep(0.5)
-
     if (sys.platform == "linux"):
         (x, y) = pyautogui.position()
-        #mouseClickLinux(x, y)
-        time.sleep(0.5)
-
 
     throwFishingLine(x, y) # start fishing
     time.sleep(0.5)
@@ -82,7 +78,7 @@ def fishing():
         (score, diff) = skimage.metrics.structural_similarity(first, newImage, full = True) # compare the two images
         diff = (diff * 255).astype("uint8")
         print("SSIM: {}".format(score) + ", "  + str(score))
-        if(score < 0.88): # if the similarity is less than 0.8
+        if(score < 0.87): # if the similarity is less than 0.8
             catch = True # catch the fish
 
     getFishingLine(x, y)
@@ -91,8 +87,20 @@ def main():
 
     signal.signal(signal.SIGTERM, signal_term_handler)
 
+    # get mouse positions
+    if (sys.platform == "win32"):
+        (x, y) = win32api.GetCursorPos()
+        mouseClickWindows(x, y)  # focus on the game
+        time.sleep(0.5)
+
+    if (sys.platform == "linux"):
+        (x, y) = pyautogui.position()
+        #mouseClickLinux(x, y)
+        time.sleep(0.5)
+
     while(1):
         fishing()
+        time.sleep(0.5)
 
 
 if __name__ == "__main__":
